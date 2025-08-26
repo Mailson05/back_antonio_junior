@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Aluno {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // gerando auto incremental
     private Long id;
 
     private  String nome;
