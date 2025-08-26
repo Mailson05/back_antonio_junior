@@ -1,5 +1,6 @@
 package controller;
 
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,6 +17,7 @@ public class AlunoController {
     @Autowired
     private AlunoRepository repository;
 
+    @Transactional
     @PostMapping
     public void Cadastrar(@RequestBody DadosCadastroAluno dados){
         repository.save( new Aluno(dados));
